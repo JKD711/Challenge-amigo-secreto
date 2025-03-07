@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #850b5f;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary: #ffd8f4;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -149,7 +149,7 @@ ul {
     width: 100%;
     padding: 10px 40px;
     color: var(--color-white);
-    background-color: var(--color-button);
+    background-color: hsl(333.41deg 88.89% 38.82%);
     font-size: 16px;
 }
 
