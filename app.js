@@ -15,6 +15,7 @@ function agregarAmigo() {
     }
     //Actualizar el array de amigos
     amigos.push(nombreDeAmigo);
+    //Limpiar caja
     ingresarNombre.value = '';
     ingresarNombre.focus();
     mostrarAmigos();
