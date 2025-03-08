@@ -12,14 +12,15 @@ function agregarAmigo() {
     if (!nombreDeAmigo) {
         alert("Por favor, ingrese un nombre.");
         return;
+    } else {
+        //Actualizar el array de amigos
+        amigos.push(nombreDeAmigo);
+        //Limpiar caja
+        ingresarNombre.value = '';
+        ingresarNombre.focus();
+        mostrarAmigos();
+        //console.log(amigos);
     }
-    //Actualizar el array de amigos
-    amigos.push(nombreDeAmigo);
-    //Limpiar caja
-    ingresarNombre.value = '';
-    ingresarNombre.focus();
-    mostrarAmigos();
-    //console.log(amigos);
 }
 
 function mostrarAmigos() {
@@ -37,7 +38,7 @@ function mostrarAmigos() {
     }
 }
 
-
+// Función para realizar el sorteo de un amigo aleatorio
 function sortearAmigo() {
     //Validar que haya amigos disponibles
     if (amigos.length === 0) {
@@ -45,12 +46,25 @@ function sortearAmigo() {
         return;
     }
     //Generar un índice aleatorio y Obtener el nombre sorteado
-    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    let indice = Math.floor(Math.random() * amigos.length);
+     // Extrae y elimina el amigo sorteado del array
+    // splice(indice, 1) devuelve un array con el elemento eliminado, por lo que [0] extrae ese único elemento
+    let amigoSorteado = amigos.splice(indice, 1)[0];
+
     //Mostrar el resultado
     let resultado = document.getElementById("resultado");
     resultado.innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
-    
+    mostrarAmigos();
+
+     // Muestra una alerta cuando todos han sido sorteados
+    if (amigos.length === 0) {
+        setTimeout(() => {
+            alert("Ya se sortearon todos los amigos de la lista");
+        }, 600);
+    }
+
     //Limpiar lista
     let limpiarLista = document.getElementById('listaAmigos');
     limpiarLista.innerHTML = "";
 }
+
