@@ -23,7 +23,7 @@
 
 4. **Resultado del Sorteo**: Muestra el nombre del amigo secreto seleccionado aleatoriamente.
    
-   ![image](https://github.com/user-attachments/assets/e12e26a5-4c0e-451b-b835-b15befcc63de)
+   ![image](https://github.com/user-attachments/assets/eb626501-db93-4037-8375-174a4d4e71d4)
 
 
 ## 🛠️ Tecnologías Utilizadas
