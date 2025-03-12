@@ -40,7 +40,7 @@ Para ejecutar esta aplicación en tu entorno local, sigue estos pasos:
 1. **Clona este repositorio**:
 
    ```bash
-   git clone https://github.com/tu_usuario/amigo_secreto.git
+   gh repo clone JKD711/Challenge-amigo-secreto
    ```
 
 2. **Navega al directorio del proyecto**:
